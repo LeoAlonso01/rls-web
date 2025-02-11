@@ -1,15 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/src/assets/logo_fondo_transparente_2.svg"/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content="RLS" />
+		<meta name="author" content="Astro Team" />
+		<meta name="keywords" content="Astro, Astro Basics" />
+		<meta name="theme-color" content="#000000" />
+		<link rel="stylesheet" href="/src/styles/global.css" />
+		<title>RLS</title>
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	</head>
 	<body>
 		<slot />
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </html>
 
 <style>
@@ -19,4 +28,102 @@
 		width: 100%;
 		height: 100%;
 	}
+	  /* Contenedor principal del logo */
+	  .logo-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 10px solid black;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Borde exterior con texto dorado */
+    .logo-border {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      border-radius: 50%;
+      border: 10px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: gold;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px black;
+    }
+
+    /* Texto superior e inferior */
+    .logo-border::before {
+      content: "S.C. ECUMÉNICO 'CURITACAHERI DE MESOAMÉRICA'";
+      position: absolute;
+      top: 10px;
+      width: 100%;
+    }
+
+    .logo-border::after {
+      content: "M.R.G.L. ECUMÉNICA 'CURITACAHERI DE MESOAMÉRICA'";
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    /* Cuadrantes del fondo */
+    .quadrant {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+      background-color: navy;
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+
+    .top-right {
+      top: 0;
+      right: 0;
+      background-color: skyblue;
+      clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+      background-color: yellow;
+      clip-path: polygon(0 100%, 100% 0, 0 0);
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      background-color: green;
+      clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    }
+
+    /* Símbolos en los cuadrantes */
+    .symbol {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Centrar los símbolos */
+    .symbol svg {
+      max-width: 100%;
+      max-height: 100%;
+    }
 </style>

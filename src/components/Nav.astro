@@ -2,10 +2,82 @@
 // src/components/Nav.astro
 ---
 
-<div>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contacto">Contact</a>
-    </nav>      
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="logo">
+    <div class="quadrants">
+        <div class="quadrant top-left"></div>
+        <div class="quadrant top-right"></div>
+        <div class="quadrant bottom-left"></div>
+        <div class="quadrant bottom-right"></div>
+    </div>
+    
 </div>
+    <div class="container-fluid">
+      
+      <a class="navbar-brand" href="/">RLS CURITACAHERI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about" >Nosotros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mas Información
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Eventos</a></li>
+              <li><a class="dropdown-item" href="#">Fotos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/maestros">Nuestros Maestros</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    
+    .logo {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: black;
+        border: 10px solid gold;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .quadrants {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .quadrant {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+    }
+    .top-left { background: darkblue; top: 0; left: 0; }
+    .top-right { background: lightblue; top: 0; right: 0; }
+    .bottom-left { background: yellow; bottom: 0; left: 0; }
+    .bottom-right { background: green; bottom: 0; right: 0; }
+   
+</style>

@@ -1,0 +1,47 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; {currentYear} Your Company. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+<style>
+    .footer {
+        background-color: ivory;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    .footer nav ul li {
+        margin: 0 10px;
+    }
+    .footer nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer nav ul li a:hover {
+        text-decoration: underline;
+    }
+</style>
